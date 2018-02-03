@@ -73,6 +73,7 @@ public class CalculatorView extends JFrame{
         calcPanel.add(calculateButtondiv);
         calcPanel.add(calculateButtonadd);
         calcPanel.add(calculateButtonmul);
+        calcPanel.add(calculateButtonmod);
         calcPanel.add(calcSolution);
 
         
@@ -157,6 +158,33 @@ public class CalculatorView extends JFrame{
     	         
     	
     	    }
+    	    void mulCalculateListener(ActionListener listenForCalcButton){
+    	    	
+   	         
+    	    	
+    	        calculateButtonmul.addActionListener(listenForCalcButton);
+    	
+    	         
+    	
+    	    }
+         void divCalculateListener(ActionListener listenForCalcButton){
+    	    	
+   	         
+    	    	
+    	        calculateButtondiv.addActionListener(listenForCalcButton);
+    	
+    	         
+    	
+    	    }
+         void modCalculateListener(ActionListener listenForCalcButton){
+ 	    	
+   	         
+ 	    	
+ 	        calculateButtonmod.addActionListener(listenForCalcButton);
+ 	
+ 	         
+ 	
+ 	    }
     	 // Open a popup that contains the error message passed
 
     	    void displayErrorMessage(String errorMessage){

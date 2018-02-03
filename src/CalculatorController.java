@@ -39,9 +39,9 @@ public class CalculatorController {
 
        this.theView.addCalculateListener(new CalculateListener());
        this.theView.subCalculateListener(new CalculateListener1());
-       //this.theView.mulCalculateListener(new CalculateListener2());
-       //this.theView.divCalculateListener(new CalculateListener3());
-      // this.theView.modCalculateListener(new CalculateListener4());
+       this.theView.mulCalculateListener(new CalculateListener2());
+     this.theView.divCalculateListener(new CalculateListener3());
+     this.theView.modCalculateListener(new CalculateListener4());
 
    }
 
@@ -158,8 +158,133 @@ public class CalculatorController {
 
    }
 
+   class CalculateListener2 implements ActionListener{
 
 
+
+       public void actionPerformed(ActionEvent e) {
+    	   int firstNumber, secondNumber = 0;
+
+           
+
+           // Surround interactions with the view with
+
+           // a try block in case numbers weren't
+
+           // properly entered
+
+            
+
+           try{
+
+            
+
+               firstNumber = theView.getFirstNumber();
+
+               secondNumber = theView.getSecondNumber();
+
+                
+
+               theModel.mulTwoNumbers(firstNumber, secondNumber);
+              
+               
+               theView.setCalcSolution(theModel.getCalculationValue2());
+              
+            
+
+           }
+           catch(NumberFormatException ex){
+
+               
+
+               System.out.println(ex);
+               theView.displayErrorMessage("You Need to Enter 2 Integers");
+           }
+       }
+   }
+   class CalculateListener3 implements ActionListener{
+   public void actionPerformed(ActionEvent e) {
+	   int firstNumber, secondNumber = 0;
+
+       
+
+       // Surround interactions with the view with
+
+       // a try block in case numbers weren't
+
+       // properly entered
+
+        
+
+       try{
+
+        
+
+           firstNumber = theView.getFirstNumber();
+
+           secondNumber = theView.getSecondNumber();
+
+            
+
+           theModel.divTwoNumbers(firstNumber, secondNumber);
+          
+           
+           theView.setCalcSolution(theModel.getCalculationValue3());
+          
+        
+
+       }
+       catch(NumberFormatException ex){
+
+           
+
+           System.out.println(ex);
+           theView.displayErrorMessage("You Need to Enter 2 Integers");
+       }
+   }
 }
+   class CalculateListener4 implements ActionListener{
+	   public void actionPerformed(ActionEvent e) {
+		   int firstNumber, secondNumber = 0;
+
+	       
+
+	       // Surround interactions with the view with
+
+	       // a try block in case numbers weren't
+
+	       // properly entered
+
+	        
+
+	       try{
+
+	        
+
+	           firstNumber = theView.getFirstNumber();
+
+	           secondNumber = theView.getSecondNumber();
+
+	            
+
+	           theModel.modTwoNumbers(firstNumber, secondNumber);
+	          
+	           
+	           theView.setCalcSolution(theModel.getCalculationValue4());
+	          
+	        
+
+	       }
+	       catch(NumberFormatException ex){
+
+	           
+
+	           System.out.println(ex);
+	           theView.displayErrorMessage("You Need to Enter 2 Integers");
+	       }
+	   }
+	}
+}
+
            
        
