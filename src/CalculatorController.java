@@ -15,7 +15,7 @@ import java.lang.Math;
 
 public class CalculatorController {
 
-    
+    double w;
 
    private CalculatorView theView;
 
@@ -77,7 +77,7 @@ public class CalculatorController {
 
                System.out.println(ex);
 
-                
+                w=50;
 
                theView.displayErrorMessage("You Need to Enter 2 Integers not a string value");
 
@@ -130,7 +130,7 @@ public class CalculatorController {
            }
            catch(NumberFormatException ex){
 
-               
+               w=50;
 
                System.out.println(ex);
                theView.displayErrorMessage("You Need to Enter 2 doubles only");
@@ -184,7 +184,7 @@ public class CalculatorController {
            }
            catch(NumberFormatException ex){
 
-               
+               w=50;
 
                System.out.println(ex);
                theView.displayErrorMessage("You Need to Enter 2 doubles only");
@@ -232,7 +232,7 @@ public class CalculatorController {
        }
        catch(NumberFormatException ex){
 
-           
+           w=50;
 
            System.out.println(ex);
            theView.displayErrorMessage("You Need to Enter 2 doubles only");
@@ -267,6 +267,7 @@ public class CalculatorController {
 
 	       }
 	       catch(NumberFormatException ex){
+	    	   w=50;
 
 	           
 
@@ -304,7 +305,7 @@ public class CalculatorController {
 	       }
 	       catch(NumberFormatException ex){
 
-	           
+	           w=50;
 
 	           System.out.println(ex);
 	           theView.displayErrorMessage("You Need to Enter 1 double value in square root");

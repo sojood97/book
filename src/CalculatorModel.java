@@ -12,6 +12,7 @@ public class CalculatorModel {
 
     private JTextField calcSolution;
     String result;
+    double y;
     public void addTwoNumbers(double firstNumber, double secondNumber){
 
          
@@ -80,7 +81,7 @@ public class CalculatorModel {
 
         if( secondNumber ==0){
         	 JOptionPane.showMessageDialog(null,"enter any number except zero in division");
-        	 
+        	  y=20.0;
         	 
         }
         else{
