@@ -1,120 +1,158 @@
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class CalculatorModel {
 
  
 
-    // Holds the value of the sum of the numbers
-
-    // entered in the view
-
+   
      
 
-    private int calculationValue;
+    private double calculationValue;
 
-     
-
-    public void addTwoNumbers(int firstNumber, int secondNumber){
+    private JTextField calcSolution;
+    String result;
+    public void addTwoNumbers(double firstNumber, double secondNumber){
 
          
 
         calculationValue = firstNumber + secondNumber;
-
+        result=" "+calculationValue;
          
 
     }
 
      
 
-    public int getCalculationValue(){
+    public String getCalculationValue(){
 
          
 
-        return calculationValue;
+        return result;
 
          
 
     }
     
-    public void subTwoNumbers(int firstNumber, int secondNumber){
+    public void subTwoNumbers(double firstNumber, double secondNumber){
 
         
 
         calculationValue = firstNumber - secondNumber;
 
-         
+        result=" "+calculationValue;
 
     }
 
      
 
-    public int getCalculationValue1(){
+    public String getCalculationValue1(){
 
          
 
-        return calculationValue;
+        return result;
 
          
 
     }
-    public void mulTwoNumbers(int firstNumber, int secondNumber){
+    public void mulTwoNumbers(double firstNumber, double secondNumber){
 
         
 
         calculationValue = firstNumber * secondNumber;
 
-         
+        result=" "+calculationValue;
 
     }
 
      
 
-    public int getCalculationValue2(){
+    public String getCalculationValue2(){
 
          
 
-        return calculationValue;
+        return result;
 
          
 
     }
-    public void divTwoNumbers(int firstNumber, int secondNumber){
+    public void divTwoNumbers(double firstNumber, double secondNumber){
 
-        
+        if( secondNumber ==0){
+        	 JOptionPane.showMessageDialog(null,"enter any number except zero in division");
+        	 
+        	 
+        }
+        else{
 
         calculationValue = firstNumber / secondNumber;
 
-         
-
+        } 
+        result=" "+calculationValue;
+       // calcSolution.setText(" ");
     }
 
      
 
-    public int getCalculationValue3(){
+    public String getCalculationValue3(){
 
          
 
-        return calculationValue;
+        return result;
 
          
 
     }
-    public void modTwoNumbers(int firstNumber, int secondNumber){
+    public void modTwoNumbers(double firstNumber, double secondNumber){
 
         
+   int x= (int) ( firstNumber);
+   int y= (int) ( secondNumber);
+    	
+        calculationValue = (int) (x % y);
 
-        calculationValue = firstNumber % secondNumber;
-
-         
+        result=" "+calculationValue;
 
     }
 
      
 
-    public int getCalculationValue4(){
+    public String getCalculationValue4(){
 
          
 
-        return calculationValue;
+        return  result;
+
+         
+
+    }
+    
+public void squareNumber(double firstNumber){
+
+        
+        if(firstNumber<0){
+        	JOptionPane.showMessageDialog( null,"must positve value in square root ");
+        	
+        }
+        else{
+       calculationValue =  Math.sqrt(firstNumber) ;
+	
+        }
+	
+	        
+
+	            
+        result=" "+calculationValue;
+
+    }
+
+     
+
+    public String getCalculationValue5(){
+
+         
+
+        return result;
 
          
 

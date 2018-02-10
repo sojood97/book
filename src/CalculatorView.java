@@ -40,6 +40,10 @@ public class CalculatorView extends JFrame{
     private JLabel modLabel = new JLabel("%");
     private JButton calculateButtonmod = new JButton("Calculate mod");
     
+    private JLabel squareLabel = new JLabel("");
+    private JButton calculateButtonsquare = new JButton("Calculate squreroot");
+    
+    
    
 
     
@@ -48,8 +52,7 @@ public class CalculatorView extends JFrame{
 
          
 
-        // Sets up the view and adds the components
-
+        
          
 
         JPanel calcPanel = new JPanel();
@@ -74,6 +77,7 @@ public class CalculatorView extends JFrame{
         calcPanel.add(calculateButtonadd);
         calcPanel.add(calculateButtonmul);
         calcPanel.add(calculateButtonmod);
+        calcPanel.add(calculateButtonsquare);
         calcPanel.add(calcSolution);
 
         
@@ -84,16 +88,16 @@ public class CalculatorView extends JFrame{
 
          
 
-        // End of setting up the components --------
+        
 
          
 
     }
-    public int getFirstNumber(){
+    public double getFirstNumber(){
     	
     	         
     	
-    	        return Integer.parseInt(firstNumber.getText());
+    	        return Double.parseDouble(firstNumber.getText());
     	
     	         
     	
@@ -101,11 +105,11 @@ public class CalculatorView extends JFrame{
     
     	     
     	
-    	    public int getSecondNumber(){
+    	    public double getSecondNumber(){
     
     	         
     	
-    	        return Integer.parseInt(secondNumber.getText());
+    	        return Double.parseDouble(secondNumber.getText());
     	
     	         
     	
@@ -113,8 +117,8 @@ public class CalculatorView extends JFrame{
     	
     	     
     	
-    	    public int getCalcSolution(){
-    	    	return Integer.parseInt(calcSolution.getText());
+    	    public double getCalcSolution(){
+    	    	return Double.parseDouble(calcSolution.getText());
     	    	
    	         
     	    	
@@ -122,11 +126,11 @@ public class CalculatorView extends JFrame{
     	
     	     
     	
-    	    public void setCalcSolution(int solution){
+    	    public void setCalcSolution(String solution){
     	
     	         
     	
-    	        calcSolution.setText(Integer.toString(solution));
+    	        calcSolution.setText(solution);
     	
     	         
     	
@@ -134,9 +138,7 @@ public class CalculatorView extends JFrame{
     	
     	     
     	
-    	    // If the calculateButton is clicked execute a method
-    	
-    	    // in the Controller named actionPerformed
+    	    
     
     	     
     	
@@ -185,7 +187,17 @@ public class CalculatorView extends JFrame{
  	         
  	
  	    }
-    	 // Open a popup that contains the error message passed
+         
+         void squareCalculateListener(ActionListener listenForCalcButton){
+  	    	
+   	         
+  	    	
+  	        calculateButtonsquare.addActionListener(listenForCalcButton);
+  	
+  	         
+  	
+  	    }
+    	
 
     	    void displayErrorMessage(String errorMessage){
     	    	

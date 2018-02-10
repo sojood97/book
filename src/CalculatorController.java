@@ -8,8 +8,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 import java.awt.event.ActionListener;
+import java.lang.Math;
 
-//import CalculatorController.CalculateListener;
+
+
 
 public class CalculatorController {
 
@@ -29,19 +31,14 @@ public class CalculatorController {
 
         
 
-       // Tell the View that when ever the calculate button
-
-       // is clicked to execute the actionPerformed method
-
-       // in the CalculateListener inner class
-
-        
+    
 
        this.theView.addCalculateListener(new CalculateListener());
        this.theView.subCalculateListener(new CalculateListener1());
        this.theView.mulCalculateListener(new CalculateListener2());
      this.theView.divCalculateListener(new CalculateListener3());
      this.theView.modCalculateListener(new CalculateListener4());
+     this.theView.squareCalculateListener(new CalculateListener5());
 
    }
 
@@ -52,16 +49,11 @@ public class CalculatorController {
 
 
        public void actionPerformed(ActionEvent e) {
-    	   int firstNumber, secondNumber = 0;
+    	   double firstNumber, secondNumber = 0.0;
 
            
 
-           // Surround interactions with the view with
-
-           // a try block in case numbers weren't
-
-           // properly entered
-
+          
             
 
            try{
@@ -72,10 +64,7 @@ public class CalculatorController {
 
                secondNumber = theView.getSecondNumber();
 
-                
-
                theModel.addTwoNumbers(firstNumber, secondNumber);
-              
                
                theView.setCalcSolution(theModel.getCalculationValue());
               
@@ -90,7 +79,7 @@ public class CalculatorController {
 
                 
 
-               theView.displayErrorMessage("You Need to Enter 2 Integers");
+               theView.displayErrorMessage("You Need to Enter 2 Integers not a string value");
 
                 
 
@@ -109,7 +98,7 @@ public class CalculatorController {
 
 
        public void actionPerformed(ActionEvent e) {
-    	   int firstNumber, secondNumber = 0;
+    	   double firstNumber, secondNumber = 0.0;
 
            
 
@@ -144,7 +133,7 @@ public class CalculatorController {
                
 
                System.out.println(ex);
-               theView.displayErrorMessage("You Need to Enter 2 Integers");
+               theView.displayErrorMessage("You Need to Enter 2 doubles only");
 
                
 
@@ -163,7 +152,7 @@ public class CalculatorController {
 
 
        public void actionPerformed(ActionEvent e) {
-    	   int firstNumber, secondNumber = 0;
+    	   double firstNumber, secondNumber = 0.0;
 
            
 
@@ -198,13 +187,13 @@ public class CalculatorController {
                
 
                System.out.println(ex);
-               theView.displayErrorMessage("You Need to Enter 2 Integers");
+               theView.displayErrorMessage("You Need to Enter 2 doubles only");
            }
        }
    }
    class CalculateListener3 implements ActionListener{
    public void actionPerformed(ActionEvent e) {
-	   int firstNumber, secondNumber = 0;
+	   double firstNumber, secondNumber =0.0;
 
        
 
@@ -221,17 +210,24 @@ public class CalculatorController {
         
 
            firstNumber = theView.getFirstNumber();
+           
+      //     if(theView.getSecondNumber()==0)
+      //    {
+        //1	 JOptionPane.showMessageDialog(null,"enter any number except zero");
+      //    }
+           
+          
+         
+          // secondNumber = theView.getSecondNumber();
 
-           secondNumber = theView.getSecondNumber();
-
-            
-
+         // }
+         secondNumber = theView.getSecondNumber();
            theModel.divTwoNumbers(firstNumber, secondNumber);
           
            
            theView.setCalcSolution(theModel.getCalculationValue3());
           
-        
+       
 
        }
        catch(NumberFormatException ex){
@@ -239,22 +235,17 @@ public class CalculatorController {
            
 
            System.out.println(ex);
-           theView.displayErrorMessage("You Need to Enter 2 Integers");
+           theView.displayErrorMessage("You Need to Enter 2 doubles only");
        }
    }
 }
    class CalculateListener4 implements ActionListener{
 	   public void actionPerformed(ActionEvent e) {
-		   int firstNumber, secondNumber = 0;
+		   double firstNumber, secondNumber = 0.0;
 
 	       
 
-	       // Surround interactions with the view with
-
-	       // a try block in case numbers weren't
-
-	       // properly entered
-
+	      
 	        
 
 	       try{
@@ -280,10 +271,46 @@ public class CalculatorController {
 	           
 
 	           System.out.println(ex);
-	           theView.displayErrorMessage("You Need to Enter 2 Integers");
+	           theView.displayErrorMessage("You Need to Enter 2 double");
 	       }
 	   }
 	}
+   class CalculateListener5 implements ActionListener{
+	   public void actionPerformed(ActionEvent e) {
+		   double firstNumber = 0.0;
+
+	       
+
+	       
+	        
+
+	       try{
+
+	        
+
+	           firstNumber = theView.getFirstNumber();
+
+	           
+
+	            
+
+	           theModel.squareNumber(firstNumber);
+	          
+	           
+	           theView.setCalcSolution(theModel.getCalculationValue5());
+	          
+	        
+
+	       }
+	       catch(NumberFormatException ex){
+
+	           
+
+	           System.out.println(ex);
+	           theView.displayErrorMessage("You Need to Enter 1 double value in square root");
+	       }
+	   }
+   }
 }
 
            
