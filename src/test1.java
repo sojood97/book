@@ -23,7 +23,7 @@ public class test1 {
 	CalculatorController c3=new CalculatorController(c2, c1);
 
 	@Test
-	 public void testadd() throws Exception {
+	 public void addtest() throws Exception {
 		 double expexted=7.0;
 		 c1.addTwoNumbers(3.0,4.0);
 		 String x=c1.getCalculationValue();
@@ -34,7 +34,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void testaddnegative() throws Exception {
+	 public void addnegativetest() throws Exception {
 		 double expexted=-7.0;
 		 
 		 
@@ -47,7 +47,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void testdivbyzero() throws Exception {
+	 public void divbyzerotest() throws Exception {
 		
 		 double expexted=20.0;
 		 
@@ -59,7 +59,7 @@ public class test1 {
 	
 	 }
 	@Test
-	public void testnegativesquarerrot() throws Exception {
+	public void negativesquarerrottest() throws Exception {
 		
 		 //double expexted=2.0;
 		 
@@ -71,7 +71,7 @@ public class test1 {
 	
 	 }
 	@Test
-	public void testnotaccseptstring() throws Exception {
+	public void notaccseptstringtest() throws Exception {
 		
 		
 		
@@ -108,7 +108,7 @@ public class test1 {
 	
 	 }
 	@Test
-	 public void testsubnegative() throws Exception {
+	 public void subnegativetest() throws Exception {
 		 double expexted=2.0;
 		 
 		 
@@ -121,7 +121,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void testdiv() throws Exception {
+	 public void divtest() throws Exception {
 		 double expexted=2.0;
 		 
 		 
@@ -134,7 +134,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void testmul() throws Exception {
+	 public void multest() throws Exception {
 		 double expexted=8.0;
 		 
 		 
@@ -147,7 +147,7 @@ public class test1 {
 	 }
 
 	@Test
-	 public void testmod() throws Exception {
+	 public void modtest() throws Exception {
 		 double expexted=0.0;
 		 
 		 
