@@ -81,7 +81,7 @@ public class CalculatorModel {
 
         if( secondNumber ==0){
         	 JOptionPane.showMessageDialog(null,"enter any number except zero in division");
-        	  y=20.0;
+        	 y=20.0;
         	 
         }
         else{
