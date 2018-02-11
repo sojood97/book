@@ -1,3 +1,4 @@
+package calc;
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -158,19 +159,7 @@ public class test1 {
 		 
 	
 	 }
-	@Test
 	
-	 public void test() throws Exception {
-		 double expexted=0.0;
-		 
-		 
-		 c1.modTwoNumbers(4.0,2.0);
-		 String x=c1.getCalculationValue();
-		assertEquals(expexted,Double.parseDouble(x),-2);
-		 
-		 
-	
-	 }
 	
 	    
 
