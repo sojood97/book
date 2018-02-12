@@ -24,7 +24,7 @@ public class test1 {
 	CalculatorController c3=new CalculatorController(c2, c1);
 
 	@Test
-	 public void addtest() throws Exception {
+	 public void addtest()  {
 		 double expexted=7.0;
 		 c1.addTwoNumbers(3.0,4.0);
 		 String x=c1.getCalculationValue();
@@ -35,7 +35,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void addnegativetest() throws Exception {
+	 public void addnegativetest()  {
 		 double expexted=-7.0;
 		 
 		 
@@ -48,7 +48,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void divbyzerotest() throws Exception {
+	 public void divbyzerotest()  {
 		
 		 double expexted=20.0;
 		 
@@ -60,7 +60,7 @@ public class test1 {
 	
 	 }
 	@Test
-	public void negativesquarerrottest() throws Exception {
+	public void negativesquarerrottest() {
 		
 		 //double expexted=2.0;
 		 
@@ -72,7 +72,7 @@ public class test1 {
 	
 	 }
 	@Test
-	public void notaccseptstringtest() throws Exception {
+	public void notaccseptstringtest() {
 		
 		
 		
@@ -100,7 +100,6 @@ public class test1 {
              
 
       System.out.println(ex);
-           c2.displayErrorMessage("You Need to Enter 2 double number not a string");
 
              
 
@@ -109,7 +108,7 @@ public class test1 {
 	
 	 }
 	@Test
-	 public void subnegativetest() throws Exception {
+	 public void subnegativetest() {
 		 double expexted=2.0;
 		 
 		 
@@ -122,7 +121,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void divtest() throws Exception {
+	 public void divtest() {
 		 double expexted=2.0;
 		 
 		 
@@ -135,7 +134,7 @@ public class test1 {
 	 }
 	
 	@Test
-	 public void multest() throws Exception {
+	 public void multest() {
 		 double expexted=8.0;
 		 
 		 
@@ -148,7 +147,7 @@ public class test1 {
 	 }
 
 	@Test
-	 public void modtest() throws Exception {
+	 public void modtest()  {
 		 double expexted=0.0;
 		 
 		 
