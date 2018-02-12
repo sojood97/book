@@ -12,8 +12,9 @@ location="./mylibryris/selenium-server-standalone-3.9.0.jar"/>
 </path>
 	
 	
-	
+	  
 <target name="compile">
+	
 <mkdir dir="${result.javaclasses.dir}"/>
 <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true"
 includeantruntime="false">

@@ -34,7 +34,7 @@ public class test1 {
 	
 	 }
 	
-/*	@Test
+	@Test
 	 public void addnegativetest() throws Exception {
 		 double expexted=-7.0;
 		 
@@ -160,7 +160,7 @@ public class test1 {
 	
 	 }
 	
-	*/
+	
 	    
 
 }

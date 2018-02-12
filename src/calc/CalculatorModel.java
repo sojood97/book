@@ -81,7 +81,6 @@ public class CalculatorModel {
     public void divTwoNumbers(double firstNumber, double secondNumber){
 
         if( secondNumber ==0){
-        	 JOptionPane.showMessageDialog(null,"enter any number except zero in division");
         	 y=20.0;
         	 
         }
@@ -133,7 +132,6 @@ public void squareNumber(double firstNumber){
 
         
         if(firstNumber<0){
-        	JOptionPane.showMessageDialog( null,"must positve value in square root ");
         	
         }
         else{
